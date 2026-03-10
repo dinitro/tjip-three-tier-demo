@@ -145,17 +145,12 @@ The `bootstrap/` directory creates a GCS bucket for Terraform remote state.
 cd bootstrap
 terraform init
 terraform apply -var="project_id=my-gcp-project"
-
-# Note the bucket name from the output
-terraform output bucket_name
 ```
-
-Then update `providers.tf` with the newly created bucket name.
 
 ### Step 2: Deploy the infrastructure
 
 ```bash
-cd ..   # back to root
+In root directory.
 
 # 1. Authenticate with gcloud
 
